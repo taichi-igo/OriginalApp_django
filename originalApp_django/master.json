@@ -1,0 +1,4 @@
+[
+  {"model": "master.occupation", "fields": {"name": "航空"}},{
+    "model": "master.occupation", "fields": {"name": "飲食"}},
+    {"model": "master.occupation", "fields": {"name": "アパレル"}}]
