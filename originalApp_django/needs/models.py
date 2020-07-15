@@ -14,7 +14,10 @@ class Need(models.Model):
         created_at = models.DateTimeField('投稿日時', default=datetime.now())
 
         def __str__(self):
-            return f"{self.id} / {self.content}"
+            status = ""
+            if not self.is_passed:
+                status = "審査待ち"
+            return f"{self.id} / {self.content} / {status}"
 
 # class Comment(models.Model):
 #

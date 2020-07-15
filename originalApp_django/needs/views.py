@@ -23,8 +23,12 @@ class NeedViewSet(viewsets.ModelViewSet):
 
     # needs/ GET
     def list(self, request):
-        query = self.queryset
-        data = self.serializers_class(query, many=True)
+        occupation = request.GET.get("occupation", "")
+        query = self.queryset.filter(
+            occupation_id__name = occupation,
+            is_passed = True
+        )
+        data = self.serializers_class(query, many=True).data
         return Response(data)
 
     # needs/ POST

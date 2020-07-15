@@ -15,6 +15,7 @@ class NeedSerializer(serializers.ModelSerializer):
             'occupation_id',
             'content',
             'username',
+            'created_at',
         )
 
 # class CommentSerializer(serializers.ModelSerializer):
